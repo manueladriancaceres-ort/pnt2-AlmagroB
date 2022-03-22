@@ -1,0 +1,12 @@
+Dada una lista
+
+let lista = [4,3,-2,5,8,20,-30];
+
+// sumar positivos
+// sumar negativos
+// contar positivos
+// contar negativos
+
+
+// Desafio, usar una sola variable
+// para los resultados
