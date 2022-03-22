@@ -31,20 +31,23 @@ const proceso = {
     stockAcutal: [{codigoProducto: 1, cantidad: 10, stockMinimo: 5},
                   {codigoProducto: 2, cantidad: 8, stockMinimo: 12},
                   {codigoProducto: 3, cantidad: 8, stockMinimo: 13}],
-    stockNuevo: [],
+    stockNuevo: [{codigoProducto: 3, paraAgregar: 3},
+                 {codigoProducto: 2, paraAgregar: 10}],
+
+    // Recorrer stockAcual y devolver los productos con stock minimo
     calcularMinimos: function() {
-        const productosStockMinimo = []
-        return productosStockMinimo
+        const productosStockMinimo = [];
+        return productosStockMinimo;
     } ,   
 
-    calcular: function() {
+    // Actualizar stockActual con stockNuevo
+    actualizarStock: function() {
 
     }
 
 }
 
 console.log(proceso.calcularMinimos());
-console.log(proceso.calcular());
 // proceso = 45;
 // console.log(proceso);
 
