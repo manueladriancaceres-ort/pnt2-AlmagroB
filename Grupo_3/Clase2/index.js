@@ -17,6 +17,9 @@ const proceso = {
 
     // Recorrer stockAcual y devolver los productos con stock minimo
     calcularMinimos: function() {
+
+        /*
+        //consigna 1: Encontrar el producto con codigo minimo
         let productosStockMinimo = []; //PREGUNTA: PODRIA HACER CONST Y EN EL NUEVO MINIMO UN .CLEAR ?
         let minimo = proceso.stockAcutal[0].stockMinimo;
         for (let index =0 ; index< this.stockAcutal.length; index++){
@@ -26,6 +29,15 @@ const proceso = {
           }else if(this.stockAcutal[index].stockMinimo == minimo){
               productosStockMinimo.push(this.stockAcutal[index]);
           }
+        }*/
+
+        const productosStockMinimo = []
+        //consigna 2: Encontrar los productos cuya cantidad es menor a su atributo stockMinimo
+        for (let i = 0; i < this.stockAcutal.length; i++) {
+            if(this.stockAcutal[i].cantidad < this.stockAcutal[i].stockMinimo){
+                productosStockMinimo.push(this.stockAcutal[i])
+            }
+
         }
         return productosStockMinimo;
     } ,
