@@ -11,20 +11,20 @@ const proceso = {
                  {codigoProducto: 2, paraAgregar: 10}],
 
     ordenarPorCandidad() {
-
+        const productosOrdenadosCantidad = this.stockAcutal.sort((a,b) => a.cantidad - b.cantidad);
+        return productosOrdenadosCantidad;
     },        
     // Devolver lista de productos con 
     // stock menor al minimo            
     // los mismos objetos de la lista
     calcularMinimos() {
-        const productosStockMinimo = [];
+        const productosStockMinimo = this.stockAcutal.filter(item => item.cantidad < item.stockMinimo);
         return productosStockMinimo;
-    } ,   
-    
+    } ,       
 
     // lista.reduce( (suma, objeto) => suma + objeto.valor , 0)
     cantidadTotal() {
-
+        return this.stockAcutal.reduce((suma, item) => suma + item.cantidad, 0);
     },
     cantidadStockMinimo() {
 
@@ -34,8 +34,21 @@ const proceso = {
     // devolver una nueva lista
     //
     actualizarStock() {
-        const aux = [];
+        const aux = [...this.stockAcutal];
+        aux.map(item => {
+            this.stockNuevo.forEach(nuevo => {
+                item.codigoProducto === nuevo.codigoProducto ? item.cantidad += nuevo.paraAgregar : item
+            })
+        });
         return aux;
     }
-
 }
+
+console.log('*****************ORDENO POR CANTIDAD*************************')
+console.log(proceso.ordenarPorCandidad());
+console.log('*****************CALCULO MINIMOS*************************')
+console.log(proceso.calcularMinimos());
+console.log('*****************CANTIDAD TOTAL*************************')
+console.log(proceso.cantidadTotal());
+console.log('*****************ACTUALIZO STOCK*************************')
+console.log(proceso.actualizarStock());
