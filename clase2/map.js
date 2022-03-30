@@ -24,3 +24,17 @@ console.log(
         return obj;
     })
 );
+
+
+
+
+const stockActual=  [
+    { codigoProducto: 1, cantidad: 10, stockMinimo: 5 },
+    { codigoProducto: 2, cantidad: 8, stockMinimo: 12 },
+    { codigoProducto: 3, cantidad: 8, stockMinimo: 13 },
+]
+
+
+
+
+console.log(stockActual.reduce((suma, objeto) => suma + objeto.cantidad, 0));
