@@ -18,8 +18,6 @@ console.log(listaCambiada);
 
  */
 
-
-
 const unaLista = [1,5,3,6,7,10]
 
 //agregar elemento
@@ -115,7 +113,29 @@ const arrayNuevo = unaLista.slice((0,2))
 console.log(unaLista) //[ 1, 3, 5, 6, 7, 10 ]
 console.log(arrayNuevo) //[ 5, 6, 7, 10 ]
 
+//reduce():
+const array1 = [1, 2, 3, 4];
 
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    initialValue
+);
 
+console.log('reduce')
+console.log(array1)
+console.log(sumWithInitial);
+// expected output: 10
 
+/*
+La función reductora recibe cuatro argumentos:
 
+   Acumulador (acc)
+Valor Actual (cur)
+Índice Actual (idx)
+Array (src)
+El valor devuelto de la función reductora se asigna al acumulador, cuyo valor se recuerda en cada iteración
+ de la matriz y ,en última instancia, se convierte en el valor final, único y resultante.
+
+*/
