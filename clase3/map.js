@@ -14,6 +14,7 @@ const listaObjetos = [
     {codigo:1,importe:800},
 ]
 
+
 // console.log(listaObjetos.map(  o1 => { return {importe: o1.importe + 1000}}  ));
 
 // console.log(listaObjetos.map(  o1 => { return {codigo:o1.codigo+5000, importe:o1.importe+1000} } ));
