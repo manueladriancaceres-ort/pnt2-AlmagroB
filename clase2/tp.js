@@ -14,8 +14,8 @@ const proceso = {
         { codigoProducto: 2, paraAgregar: 10 },
     ],
 
-    ordenarPorCandidad(lista) {
-        return lista.sort((a, b) => a.cantidad - b.cantidad);
+    ordenarPorCandidad() {
+        return this.stockActual.sort((a, b) => a.cantidad - b.cantidad);
     },
     // Devolver lista de productos con
     // stock menor al minimo
@@ -54,3 +54,4 @@ const proceso = {
 };
 
 console.log(proceso.cantidadTotal());
+console.log(proceso.ordenarPorCandidad());
