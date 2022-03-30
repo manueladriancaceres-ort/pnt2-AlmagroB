@@ -30,7 +30,8 @@ const proceso = {
 
     // lista.reduce( (suma, objeto) => suma + objeto.valor , 0)
     cantidadTotal() {
-        return stockActual.reduce((suma, objeto) => suma + objeto.cantidad, 0);
+        // suma = 0;
+        return this.stockActual.reduce((suma, objeto) => suma+ objeto.cantidad, 0);
     },
     cantidadStockMinimo() {
         return this.calcularMinimos().length;
@@ -52,4 +53,4 @@ const proceso = {
     },
 };
 
-proceso.actualizarStock();
+console.log(proceso.cantidadTotal());
