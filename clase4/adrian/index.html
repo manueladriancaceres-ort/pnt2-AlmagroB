@@ -11,10 +11,14 @@
     <div id="miapp">
         <p :style.color="color" >Algun texto </p>
         {{ mensaje }}
-        <p>{{ numero  + 1}} </p> 
+        <p>{{ numero  + 1}} <button @click="incrementar(100)" >Incrementar</button></p>         
         <p>{{ ok ? 'SI': 'NO' }} </p>
         {{ mensaje.split('').reverse().join('') }}
+        <p v-if="ver">Algun mensaje</p>
+        <p v-show="ver">Algun mensaje con v-show</p>
+        <button @click="mostrar">Mostrar</button>
     </div>
+
 
     <script src="index.js"></script>
 </body>
