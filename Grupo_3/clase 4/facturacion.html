@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturacion</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue@3"></script>
+
+<div id="app">
+   <h1>Facturacion</h1>
+
+    <div v-show="mostrar">
+        <span>Codigo Factura: {{factura.id}}</span>
+        <span>Numero Cliente: {{factura.numeroCliente}}</span>
+    </div>
+
+    <p>
+        Codigo Factura: <input v-model="factura.id">
+        Numero Cliente: <input v-model="factura.numeroCliente">
+    </p>
+
+
+
+    <button @click="nombrarFactura">Nombrar</button>
+
+
+</div>
+
+<script src="facturacion.js"> </script>
+
+</body>
+</html>
