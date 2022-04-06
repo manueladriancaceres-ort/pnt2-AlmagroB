@@ -7,7 +7,13 @@
 <body>
 <script src="https://unpkg.com/vue@3"></script>
 
-<div id="app">{{ message }}</div>
+<div id="app">
+    <p v-bind:style.color="color" >Algun texto </p>
+    <p>{{ numero + 1}} <button @click="incrementar">Incrementar</button>
+    </p>
+    {{ message }}
+    <p v-if="ver">Algun mensaje</p>
+</div>
 
 <script src="index.js"> </script>
 
