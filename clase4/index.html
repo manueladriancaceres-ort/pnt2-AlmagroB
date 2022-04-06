@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3"></script>
+    <div id="miapp">
+        <h1 :style.color="color">{{ title }}</h1>
+        <h3>Codigo de factura: {{ codigoFactura }}</h3>
+        <h3>Numero de cliente: {{ nroCliente }}</h3>
+
+        <h3>Items</h3>
+        <li v-for="(item,index) in items" :key="item.id">
+            {{ item.id }} {{ item.description}}
+        </li>
+
+        <p>
+            Id <input v-model="item.id">
+            Desc <input v-model="item.description">
+        </p>
+        <button @click="agregar">Agregar</button>
+        <button @click="ordenarPorDescription">Ordenar</button>
+        <button @click="changeColor" >Cambiar color de titulo</button>
+        <button @click="printJSON">Imprimir</button>
+    </p>  
+
+        <!--<p>{{ numero  + 1}} <button @click="incrementar(100)" >Incrementar</button></p>         
+        <p>{{ ok ? 'SI': 'NO' }} </p>
+        <p v-if="ver">Algun mensaje</p>
+        <p v-show="ver">Algun mensaje con v-show</p>
+        <button @click="mostrar">Mostrar</button>-->
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
