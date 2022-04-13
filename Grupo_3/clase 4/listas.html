@@ -7,9 +7,22 @@
 <body>
 <script src="https://unpkg.com/vue@3"></script>
 
-<div id="app">{{ message }}</div>
+<div id="app">
+  <li v-for="gestion in gestiones">
+    {{gestion.id}} {{gestion.desc}} {{gestion.prioridad}}
+  </li>
 
-<script src="index.js"> </script>
+  <p>
+    Id <input v-model="gestion.id">
+    Desc <input v-model="gestion.desc">
+    Prio <input v-model="gestion.prioridad">
+  </p>
+
+  <button @click="agregar">Agregar</button>
+  <button @click="ordenarPorPrioridad">OrdenarPorPrioridad</button>
+</div>
+
+<script src="listas.js"> </script>
 
 </body>
 </html>
