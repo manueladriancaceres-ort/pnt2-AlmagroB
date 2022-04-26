@@ -5,6 +5,7 @@
     <Item v-for="libro in libros" :key="libro.id" :id="libro.id" :descripcion="libro.descripcion" />
     <Libros @agregarPadre="agregar($event)"/>
     <Pie v-bind:autor='autor'/>
+
   </div>  
 </template>
 

@@ -1,5 +1,5 @@
 <script setup>
-import Sistema from "./components/Sistema.vue";
+  import Sistema from "./components/Sistema.vue";
 </script>
 
 <template>
