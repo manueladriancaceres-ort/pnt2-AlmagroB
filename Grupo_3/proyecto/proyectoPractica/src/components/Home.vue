@@ -1,13 +1,15 @@
 <template>
   <h2>Home</h2>
-  <GestionVenta></GestionVenta>
+
 </template>
 
 <script>
 import GestionVenta from "./GestionVenta.vue";
+import Vendedor from "./Vendedor.vue";
+import Cliente from "./Cliente.vue";
 export default {
   name: "Home",
-  components: {GestionVenta}
+  components: {Cliente, Vendedor, GestionVenta}
 }
 </script>
 

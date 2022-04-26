@@ -1,6 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 
 import Home from "./components/Home.vue";
 
@@ -9,18 +7,15 @@ import Home from "./components/Home.vue";
 </script>
 
 <template>
-  <Home></Home>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <p>
+    <router-link to="/">Ir a Home</router-link> |
+    <router-link to="/cliente">Cliente</router-link> |
+    <router-link to="/gestionventa">Gestion Venta</router-link> |
+    <router-link to="/vendedor">Vendedor</router-link>
+  </p>
+  <router-view></router-view>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
 
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style>
