@@ -9,7 +9,8 @@ import Home from "./components/Home.vue";
       <router-link to="/">Ir a Home</router-link> |
       <router-link to="/cliente">Cliente</router-link> |
       <router-link to="/gestionventa">Gestion Venta</router-link> |
-      <router-link to="/vendedor">Vendedor</router-link>
+      <router-link to="/vendedor">Vendedor</router-link> |
+      <router-link to="/carritocompras">Carrito de compras</router-link>
     </p>
     <router-view></router-view>
   </div>
