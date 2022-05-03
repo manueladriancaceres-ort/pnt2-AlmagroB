@@ -1,10 +1,10 @@
 <template>
-<h2>GestionVENTA</h2>
+<h2>Cliente</h2>
 </template>
 
 <script>
 export default {
-  name: "GestionVenta"
+  name: "Cliente"
 }
 </script>
 
