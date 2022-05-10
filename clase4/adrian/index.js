@@ -3,7 +3,7 @@ const objVue = Vue.createApp({
     data() {
       return {
         mensaje: 'Hola Mundo!!!!',
-        color: {color:"green"}, 
+        color: {color:"red"}, 
         numero: 0,
         ok: true,
         ver: true,

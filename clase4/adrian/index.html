@@ -9,7 +9,7 @@
 <body>
     <script src="https://unpkg.com/vue@3"></script>
     <div id="miapp">
-        <p :style.color="color" >Algun texto </p>
+        <p :style="color" >Algun texto </p>
         {{ mensaje }}
         <p>{{ numero  + 1}} <button @click="incrementar(100)" >Incrementar</button></p>         
         <p>{{ ok ? 'SI': 'NO' }} </p>
