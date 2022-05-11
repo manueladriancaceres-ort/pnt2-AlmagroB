@@ -20,6 +20,22 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.post('/api/setvendedor', (req,res) => {
+  req.body.codigo = Number(req.body.codigo)
+  lista.push(req.body);
+})
+
+app.delete('/api/vendedor/:codigo', (req,res) => {
+  const listaCodigos = lista.map( e => { return e.codigo } )
+  const indice = listaCodigos.indexOf(Number(req.params.codigo))
+  lista.splice(indice,1);
+})
+
+app.post('/api/setvendedor', (req,res) => {
+  // revisar
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
