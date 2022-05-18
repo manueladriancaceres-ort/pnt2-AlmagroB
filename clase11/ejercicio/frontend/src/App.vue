@@ -1,21 +1,45 @@
-<script setup>
-import Home from "./components/Home.vue";
-</script>
-
 <template>
-  <!--Cabecera-->
   <div>
-    <p>
-      <router-link to="/">Ir a Home</router-link> |
-      <router-link to="/cliente">Cliente</router-link> |
-      <router-link to="/gestionventa">Gestion Venta</router-link> |
-      <router-link to="/vendedor">Vendedor</router-link> |
-      <router-link to="/carritocompras">Carrito de compras</router-link>
-    </p>
+      <div v-if="!estaLogeado">
+        <router-link to="/">Ir a Home</router-link> |
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/carritocompras">Carrito de compras</router-link>
+      </div>
+      <div v-if="estaLogeado">
+        <router-link to="/cliente">Cliente</router-link> |
+        <router-link to="/gestionventa">Gestion Venta</router-link> |
+        <router-link to="/vendedor">Vendedor</router-link> 
+        <router-link to="/logout">Logout</router-link> 
+      </div>
     <router-view></router-view>
   </div>
-  <!--Pie-->
 </template>
+
+<script>
+import { usuarioStore } from "../src/store/usuario.js";
+import { storeToRefs } from "pinia";
+
+export default {
+  setup() {
+    const store = usuarioStore();
+    const { usuario, estaLogeado } = storeToRefs(store);
+    return {
+      store,
+      usuario,
+      estaLogeado,
+    };
+  },
+  data() {
+    return {
+    };
+  },
+  methods: {
+  },
+};
+
+
+</script>
+
 
 <style>
 @import "./assets/base.css";

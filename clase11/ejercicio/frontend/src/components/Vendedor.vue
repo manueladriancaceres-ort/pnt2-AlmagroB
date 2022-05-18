@@ -26,7 +26,7 @@ export default {
   },
   created: async function () {
     try {
-      const rta = await vendedorService.getVendedores(); // placeHolder.getDatos()
+      const rta = await vendedorService.getVendedores(); // ejemplo placeHolder.getDatos()
       this.lista = rta.data;
     } catch (error) {
       this.mensajeError = "No se pudo obtener los datos ";

@@ -1,17 +1,18 @@
 <template>
-  <div>Carrito compras</div>
-
-  <div>{{ listaCompras }}  <br/>
-    Codigo <input type="text" v-model="producto.codigo">
-    Descripcion <input type="text" v-model="producto.descripcion"> 
-    <button @click="agregar">Agregar producto</button>  
+  <div>
+    <div>Carrito compras</div>
+    <div>
+      {{ listaCompras }} <br />
+      Codigo <input type="text" v-model="producto.codigo" /> Descripcion
+      <input type="text" v-model="producto.descripcion" />
+      <button @click="agregar">Agregar producto</button>
+    </div>
   </div>
-
 </template>
 
 <script>
 import { useStore } from "../store/store.js";
-import { storeToRefs } from 'pinia'
+import { storeToRefs } from "pinia";
 
 export default {
   setup() {
@@ -24,13 +25,13 @@ export default {
       contador,
       aumentar,
       agregarCompra,
-      listaCompras
+      listaCompras,
     };
   },
   data() {
     return {
-      producto: {codigo:0, descripcion: ""}
-    }
+      producto: { codigo: 0, descripcion: "" },
+    };
   },
   methods: {
     cambio() {
@@ -38,10 +39,10 @@ export default {
       this.aumentar();
     },
     agregar() {
-      this.agregarCompra({...this.producto}); 
-      // this.agregarCompra([...this.producto,producto]); 
-    }
-  }
+      this.agregarCompra({ ...this.producto });
+      // this.agregarCompra([...this.producto,producto]);
+    },
+  },
 };
 </script>
 
